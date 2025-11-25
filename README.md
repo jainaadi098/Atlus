@@ -37,12 +37,18 @@ Run the Game:
 Bash
 
 python game.py
-📂 Project Structure
+
+
+---
+
+## 📂 Project Structure
 game.py - The main source code for the game.
 
 details.md - A step-by-step development log explaining how the logic evolved.
 
 README.md - This documentation file.
 
-👨‍💻 Author
+---
+
+## 👨‍💻 Author
 Aadi Jain B.Tech Engineering Student | Python Developer
