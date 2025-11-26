@@ -68,5 +68,7 @@ ATLUS/
 ├── requirements.txt   # Dependency list
 ├── README.md          # Project documentation
 └── details.md         # Detailed development log and version history
+
+
 👨‍💻 Author
 Aadi Jain Student Developer & Logic Enthusiast
