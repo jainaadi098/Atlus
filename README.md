@@ -1,54 +1,72 @@
-# 🧩 Word Chain Game (Python)
+# 🧩 ATLUS (Antakshari Text Logic Utility System)
 
-A robust and interactive **word-chain game** built in Python.  
-The player must enter a valid English word starting with the **last letter of the previous word** (or the last letter of their name to start).  
-The game continues indefinitely until a wrong input, spelling mistake, or repeated word is entered.
+![Python](https://img.shields.io/badge/Python-3.12-blue.svg) ![Status](https://img.shields.io/badge/Status-Stable-green.svg) ![Logic](https://img.shields.io/badge/Architecture-Modular-orange.svg)
 
----
-
-## 🎮 How to Play
-1. **Start:** Enter your name (must end with a letter A-Z).
-2. **The Letter:** The game assigns you a starting letter.
-3. **The Challenge:** Type a valid English word starting with that letter.
-4. **Score:** Each correct word adds **+1** to your score.
-5. **Game Over:** The game ends if you:
-   - Use a word that doesn't start with the correct letter.
-   - Repeat a word you already used.
-   - Enter a word with incorrect spelling.
+**ATLUS** is a robust, logic-based word engine developed in Python.
+It digitizes the mechanics of the classic Indian game *"Antakshari"* (Word Chain), transforming it into a crash-proof software system using modern validation techniques and modular architecture.
 
 ---
 
-## 🧱 Versions History
-- **v1:** Basic loop and core logic implementation.
-- **v2:** Added scoring system, word repetition check, and uppercase handling.
-- **v3:** Integrated spell-check validation using `pyspellchecker` to ensure words are real.
-- **v4 (Final):** Added robust input safety (anti-crash), manual name validation logic, and detailed error messages.
+## 🎮 How It Works
+The system functions as a **Text Logic Utility** that validates user inputs against three strict logic gates in real-time.
+
+1.  **Start:** The user enters a name (validated to ensure it ends with an alphabet character).
+2.  **The Seed:** The system derives the starting letter from the last character of the user's name.
+3.  **The Loop:** The user must enter a valid English word starting with the target letter.
+4.  **The Validation:** Every input must pass the **Three-Gate Architecture**:
+    * 🚪 **Gate 1 (Syntax):** Does the word start with the correct letter?
+    * 🚪 **Gate 2 (Memory):** Has the word been used before? (History Tracking)
+    * 🚪 **Gate 3 (Semantics):** Is it a valid English word? (Dictionary Check via `pyspellchecker`)
+
+If any gate fails, the game ends immediately (**Sudden Death Mode**).
 
 ---
 
-## 🛠️ Requirements
-This game requires Python and the `pyspellchecker` library.
+## 🧱 Version History & Engineering Journey
+This project evolved through iterative development, moving from a basic script to a professional engine.
 
-**Installation:**
-```bash
+* **v1 (Prototype):** Proof of concept using mathematical loop control. Fragile input handling.
+* **v2 (Functional):** Added `history_list` for memory and case-insensitive string handling.
+* **v3 (Intelligent):** Integrated `pyspellchecker` API to reject non-dictionary words (e.g., "asdf").
+* **v4 (Robust):** Implemented `while True` validation loops to handle edge cases (empty inputs, numbers, symbols).
+* **Modified v4 (Modular Refactor):** *Current Build.* Transformed the monolithic V4 script into a **Modular Architecture**. Logic is now separated into reusable functions (`game_rules_check`, `valid_name_input`) for scalability and clean code standards.
+
+---
+
+## 🛠️ Technical Stack
+* **Language:** Python 3.x
+* **External Libraries:** `pyspellchecker`
+* **Key Concepts:**
+    * Modular Programming (Functions)
+    * Boolean Logic Gates
+    * Input Sanitization & Error Handling
+    * State Management
+
+---
+
+## 🚀 Installation & Usage
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/jainaadi098/Atlus.git](https://github.com/jainaadi098/Atlus.git)
+Install Dependencies: ATLUS requires the spell-checking library.
+
+Bash
+
 pip install pyspellchecker
 Run the Game:
 
 Bash
 
 python game.py
+📂 Project Structure
+Plaintext
 
-
----
-
-## 📂 Project Structure
-game.py - The main source code for the game.
-
-details.md - A step-by-step development log explaining how the logic evolved.
-
-README.md - This documentation file.
-
----
-
-## 👨‍💻 Author
-Aadi Jain B.Tech Engineering Student | Python Developer
+ATLUS/
+│
+├── game.py            # The main game engine (Modified V4 Modular Code)
+├── requirements.txt   # Dependency list
+├── README.md          # Project documentation
+└── details.md         # Detailed development log and version history
+👨‍💻 Author
+Aadi Jain Student Developer & Logic Enthusiast

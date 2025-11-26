@@ -30,6 +30,7 @@ while True:
     
 
 print('Hi,',name,'''
+      Welcome to ATLUS (Antakshari Text Logic Utility System)
       In this game 
       we give you letter 
       And you had to tell a word 
