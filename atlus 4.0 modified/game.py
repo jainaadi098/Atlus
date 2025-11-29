@@ -23,7 +23,7 @@ def valid_name_input():
 
 def starting_message(name):
     print(f"\nHi, {name}")
-    print('''
+    print(''' 
     Welcome to ATLUS (Antakshari Text Logic Utility System)
     -------------------------------------------------------
     In this game, the system gives you a letter.
