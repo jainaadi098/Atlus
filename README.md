@@ -1,6 +1,6 @@
 # 🧩 ATLUS (Antakshari Text Logic Utility System)
 
-![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
+![Python](https://img.shields.io/badge/Python-3.13.2-blue?style=for-the-badge&logo=python)
 ![Status](https://img.shields.io/badge/Status-Production_Ready-green?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Logic_Engine-orange?style=for-the-badge)
 
