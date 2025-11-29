@@ -257,6 +257,7 @@ def main_game_loop(word_used,letter,Round,score,dificulty,lives,skips,name):
         if len(word)==0:
             print("You did not type any word ")
             print("please try agian")
+            Round=Round-1 # Do not count this round
             continue # Skip the rest and restart the loop
         
         
