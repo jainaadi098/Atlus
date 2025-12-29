@@ -1,0 +1,7 @@
+word=input()
+print(word)
+print(word.upper())
+print(word.lower())
+print(word.capitalize())
+print(word.title())
+print(word)

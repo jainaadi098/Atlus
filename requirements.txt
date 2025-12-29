@@ -1,2 +1,2 @@
 pyspellchecker
-pyttsx3
+win32com.client
