@@ -1,104 +1,89 @@
-# 🧩 ATLUS V7 (Object-Oriented Logic Engine)
+🌐 ATLUS v8.0
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
-![Status](https://img.shields.io/badge/Status-Production_Ready-green?style=for-the-badge)
-![Architecture](https://img.shields.io/badge/Architecture-OOP_Class_Based-purple?style=for-the-badge)
-![Feature](https://img.shields.io/badge/Feature-SAPI_Voice_Engine-red?style=for-the-badge)
+Antakshari Text Logic Utility System
 
-> **Version:** V7.0 (The Architect Edition)
+ATLUS is an advanced, interactive, text-based word-chain game built in Python. Inspired by the classic game of "Antakshari," players must chain valid English words together, where each new word begins with the last letter of the previous word.
 
-**ATLUS** (Antakshari Text Logic Utility System) is a professional-grade, terminal-based Word Chain engine built in Python.
+Featuring a built-in AI opponent, Text-to-Speech (TTS) integration, real-time dictionary validation, and dynamic scoring, ATLUS demonstrates robust Object-Oriented Programming (OOP) and algorithmic design.
 
-Originally a simple script, **V7** represents the final evolution into a fully **Object-Oriented Software System**. It features a robust Class architecture, the high-performance **Windows SAPI Voice Engine**, and persistent memory, all wrapped in a sci-fi command-line interface.
+✨ Features
 
----
+3 Game Modes:
 
-## 🎮 How It Works
-The system functions as a **Text Logic Utility** that validates user inputs against three strict logic gates in real-time.
+Solo Mode: Practice and set personal high scores.
 
-1.  **The Seed:** The system derives the starting letter from the last character of the user's name.
-2.  **The Loop:** The user must enter a valid English word starting with the target letter.
-3.  **The Validation:** Every input must pass the **Three-Gate Architecture**:
-    * 🚪 **Gate 1 (Syntax):** Does the word start with the correct letter?
-    * 🚪 **Gate 2 (Memory):** Has the word been used before? (History Tracking)
-    * 🚪 **Gate 3 (Semantics):** Is it a valid English word? (Dictionary Check via `pyspellchecker`)
+Multiplayer Mode: Pass-and-play against a friend locally.
 
-If any gate fails, the user loses a life. If lives reach zero, the game ends.
+Computer (AI) Mode: Battle the ATLUS AI, which scales in difficulty and utilizes weighted probabilities to make "human-like" mistakes.
 
----
+Dynamic Difficulty: Easy, Medium, and Hard (Grandmaster) modes with scaling score ladders, life limits, and history visibility.
 
-## ⚙️ Key Features (V7 Edition)
+Voice Integration: Fully voiced gameplay and rules using Windows SAPI (win32com).
 
-### 🏗️ Object-Oriented Architecture (New in V7)
-* **Class-Based Design:** The entire engine is encapsulated within the `AtlusGame` class.
-* **Encapsulation:** Game states (score, lives, history) are protected within the object (`self`), eliminating global variable errors.
-* **Scalability:** The modular design allows for easy addition of new methods or game modes.
+Strict Validation: Real-time spell checking using pyspellchecker to prevent fake words.
 
-### 🗣️ SAPI Voice Engine (Upgraded in V7)
-* **Windows Native Audio:** Switched from `pyttsx3` to `win32com.client` (SAPI) for faster, smoother, and more stable voice feedback.
-* **Dynamic Interaction:** The system verbally announces rounds, explains specific errors, and reads out rules.
+Memory & State: Prevents word repetition and saves your Highest Score persistently across sessions.
 
-### 💾 Persistent Memory
-* **High Score Tracking:** Automatically creates and updates a `high_score.txt` file.
-* **Legacy Preservation:** Retains records even after the application is closed.
+Infinite Loop Failsafes: Built-in safeguards to prevent the AI from crashing when valid word options are exhausted.
 
-### 🎨 The Sci-Fi Interface
-* **Typewriter Effect:** Text renders character-by-character (`0.03s` delay) simulating a retro hacker terminal.
-* **Dynamic Pacing:** Strategic pauses during system checks for dramatic tension.
+🛠️ Prerequisites
 
-### ⚖️ Dynamic Difficulty Scaling
-| Mode | Lives | Skips | History | Scoring Logic |
-| :--- | :--- | :--- | :--- | :--- |
-| **Easy** | 3 | 3 | Visible | Flat (+1) |
-| **Medium** | 2 | 1 | Visible | Step (+1 / +3) |
-| **Hard** | 1 | 0 | **HIDDEN** | **Ladder (+1 ➞ +5)** |
+To run ATLUS, you will need Python 3.x installed on a Windows machine (for the SAPI Voice engine).
 
----
-
-## 🧱 Version History & Engineering Journey
-This project evolved through iterative development, moving from a basic script to professional software engineering.
-
-
-
-* **v1 (Prototype):** Proof of concept using mathematical loop control. Fragile input handling.
-* **v2 (Functional):** Added `history_list` for memory and case-insensitive string handling.
-* **v3 (Intelligent):** Integrated `pyspellchecker` API to reject non-dictionary words.
-* **v4 (Robust):** Implemented `while True` validation loops to handle edge cases.
-* **v5 (The Interface):** Introduced Sci-Fi UI, Difficulty Modes, and Skip Locking.
-* **v6 (The System):** Integrated Voice (TTS) and File Handling.
-* **v7 (The Architect):** *Current Build.* Refactored into **Object-Oriented Programming (OOP)**. Switched to **SAPI Voice** for stability. Fixed uppercase logic bugs for 100% accuracy.
-
----
-
-## 🛠️ Technical Stack
-* **Language:** Python 3.12+
-* **Architecture:** Object-Oriented Programming (OOP)
-* **External Libraries:**
-    * `pyspellchecker` (Logic Validation)
-    * `pywin32` (Audio/SAPI Engine)
-* **Key Concepts:**
-    * Classes & Objects (`self`, `__init__`)
-    * Encapsulation
-    * File Handling (Read/Write I/O)
-    * Exception Handling (`try-except`)
-
----
-
-## 🚀 Installation & Usage
-
-### 1. Clone the repository
-```bash
-git clone [https://github.com/jainaadi098/Atlus.git](https://github.com/jainaadi098/Atlus.git)
-cd Atlus
-2. Install Dependencies
-You need the spell checker and the Windows extensions for audio.
-
-Bash
+You will also need to install the required external libraries:
 
 pip install pyspellchecker pywin32
-3. Run the Game
-Bash
 
-python atlus_v7.py
-👨‍💻 Author
-Aadi Jain Student Developer & Logic Enthusiast
+
+🚀 How to Run
+
+Clone this repository to your local machine:
+
+git clone https://github.com/yourusername/atlus-game.git
+
+
+Navigate to the folder:
+
+cd atlus-game
+
+
+Run the game:
+
+python main.py
+
+
+🎮 How to Play
+
+The Golden Rules:
+
+Your word MUST start with the required assigned letter.
+
+You CANNOT repeat a word that has already been used in the current game.
+
+Your word MUST be a valid English dictionary word.
+
+Surviving: You have a limited number of lives depending on your difficulty. Enter an invalid word, and you lose a life.
+
+Scoring: Harder difficulties reward you with a progressive ladder scoring system (+1 to +5 points per round).
+
+⚡ Special Commands
+
+You can type these at any time during your turn:
+
+#VOICE : Toggle the Text-to-Speech voice ON or OFF.
+
+#RULES : Display the game rules.
+
+#HISTORY: View all the words used so far (Disabled in Hard Mode).
+
+#SKIP : Skip your turn and get a new random letter (Unlocks at Round 6).
+
+#EXIT : Surrender and quit the current game.
+
+🧠 Technical Highlights
+
+OOP Architecture: The entire game loop, state management, and entity behaviors are encapsulated within the AtlusGame class.
+
+Algorithmic Failsafes: The AI utilizes state-space exhaustion detection. If no valid 3-letter word is found, it automatically scales up the search length, with a hard cap to prevent infinite while loop crashes.
+
+Created by Aadi Jain. Digitizing the logic of words.
