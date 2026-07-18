@@ -39,7 +39,7 @@ pip install pyspellchecker pywin32
 
 Clone this repository to your local machine:
 
-git clone https://github.com/yourusername/atlus-game.git
+git clone https://github.com/jainaadi098/atlus-game.git
 
 
 Navigate to the folder:
